@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<body>
+<div id="app">
+    <h2 v-text="message+'好帅'"></h2>
+    <h2 v-text="info"></h2>
+    {{message}}
+    {{info}}
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+           message:"张大楠",
+           info:"想看美女"
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<body>
+<div id="app">
+  {{message}} {{school.name}}{{school.aihao}}
+    {{array[0]}}
+    {{array[1]}}
+    {{array[2]}}
+    {{array[3]}}
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: "我是张大楠",
+            school:{
+                name:"张大楠",
+                aihao:"看漂亮妹妹"
+            },
+            array:[1,2,3,4]
+        }
+    })
+</script>
+</body>
+</html>

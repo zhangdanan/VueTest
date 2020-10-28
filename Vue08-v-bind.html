@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       .active{
+           border: 1px solid red;
+       }
+    </style>
+</head>
+<body>
+<div id="app">
+    <img v-bind:src="imgsrc" alt="">
+    <img v-bind:src="imgsrc" v-bind:title="istitle" v-bind:class="isActive?'active':''" @click="isActive" alt="">
+    <img v-bind:src="imgsrc" v-bind:title="istitle" v-bind:class="{active:isActive}" @click="isActive" alt="">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            imgsrc:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1141259048,554497535&fm=26&gp=0.jpg",
+            istitle:"zhangdanan",
+            isActive:false,
+        },
+        methods:{
+            isActive:function () {
+                this.isActive=!this.isActive;
+            }
+        }
+    })
+</script>
+</body>
+</html>

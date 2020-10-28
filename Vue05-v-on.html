@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<body>
+<div id="app">
+    <button v-on:click="greet">v-on绑定</button>
+    <button v-on:click="doit">v-on简写</button>
+    <input type="button" value="test" v-on:click="greet">
+    <input type="button" value="test" v-on:click="doit">
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        methods: {
+            greet: function () {
+                alert("做it")
+            },
+            doit: function () {
+                alert("这是啥")
+            },
+        }
+    })
+</script>
+</body>
+</html>
